@@ -10,6 +10,7 @@ pipeline {
       
                  echo 'builing main again'
                  echo 'builing newbranch1'
+                 checkout([$class: 'GitSCM', branches: [[name: '*/multibranch-sample1']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/zubairRiyaz/multibranch-pipeline-demo.git']]])
              }
         }
     
